@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAILED BY LÉA | Lagos Nail Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nail.css">
+</head>
+<body>
+
+<nav><b>NAILED BY FAVY</b><div>
+<a id="l-home" class="active" onclick="go('home')">Home</a>
+<a id="l-menu" onclick="go('menu')">Menu</a>
+<a id="l-gallery" onclick="go('gallery')">Gallery</a>
+<a id="l-testimonials" onclick="go('testimonials')">Testimonials</a>
+<a id="l-about" onclick="go('about')">About</a>
+<a id="l-book" onclick="go('book')">Book</a>
+<span onclick="toggleCart()" style="margin-left:12px;cursor:pointer">🛒 <b id="cartN">0</b></span>
+</div></nav>
+
+
+<div id="home" class="page active">
+<div class="hero">
+<div>
+<span class="badge">💅 LEKKI PHASE 1 • OPEN TODAY 9AM - 8PM</span>
+<h1 style="font-size:46px;line-height:.95;margin:12px 0">Nails That<br>Speak Luxury.</h1>
+<p style="font-size:13px;line-height:1.6;color:#7a4a5a">Acrylics, Gel, BIAB, Manicure — flawless sets, soft glam, long-lasting. 1000+ baddies nailed.</p><br>
+<button class="btn" onclick="go('book')">Book Appointment →</button>
+<button class="btn btn-outline" style="margin-left:6px" onclick="go('gallery')">View Work</button>
+<div style="display:flex;gap:12px;margin-top:18px">
+<div class="card" style="padding:10px 14px;text-align:center;flex:1"><b>4.9★</b><br><small style="font-size:10px">500+ Reviews</small></div>
+<div class="card" style="padding:10px 14px;text-align:center;flex:1"><b>3 Yrs</b><br><small style="font-size:10px">Experience</small></div>
+<div class="card" style="padding:10px 14px;text-align:center;flex:1"><b>2Hrs</b><br><small style="font-size:10px">Max Session</small></div>
+</div>
+</div>
+<div class="hero-img" id="heroWrap">
+<img class="active" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScTDnG837y283OvD6uqRFM59mR5IXVCjc2_14Hd4mJcA&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQfo2pctPbKdFHTGF6LUX6IF3Wi4-k3_8OU_hTLg5-Q&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-kztpn_PHw4gxrOONaLm7pWsE9LFBGgWyWBxhPIYJg&s=10">
+<div class="dots" id="dots"></div>
+</div>
+</div>
+</div>
+
+
+<div id="menu" class="page">
+<span class="back" onclick="go('home')">← Back to Home</span>
+<div style="text-align:center;padding:10px 5%"><h2>Service Menu</h2><p style="font-size:12px">Tap to add to booking cart •</p></div>
+<div class="grid3">
+<div class="card" onclick="add('Classic Acrylic Set',8000)"><span class="price">₦8,000</span><h3>Acrylic Set</h3><p style="font-size:11px">Plain, almond, square</p><small style="color:var(--pink)">+ Add</small></div>
+<div class="card" onclick="add('Gel Polish Manicure',6000)"><span class="price">₦6,000</span><h3>Gel Polish</h3><p style="font-size:11px">Long-lasting shine</p><small style="color:var(--pink)">+ Add</small></div>
+<div class="card" onclick="add('BIAB Extension',10000)"><span class="price">₦10,000</span><h3>BIAB + Extensions</h3><p style="font-size:11px">Strong, natural</p><small style="color:var(--pink)">+ Add</small></div>
+<div class="card" onclick="add('French Tips',9000)"><span class="price">₦9,000</span><h3>French Tips</h3><p style="font-size:11px">Classic white tips</p><small style="color:var(--pink)">+ Add</small></div>
+<div class="card" onclick="add('Chrome / Glazed',11000)"><span class="price">₦11,000</span><h3>Chrome Nails</h3><p style="font-size:11px">Hailey Bieber glazed</p><small style="color:var(--pink)">+ Add</small></div>
+<div class="card" onclick="add('Pedicure + Gel',7000)"><span class="price">₦7,000</span><h3>Pedi + Gel</h3><p style="font-size:11px">Feet pampering</p><small style="color:var(--pink)">+ Add</small></div>
+</div>
+</div>
+
+
+<div id="gallery" class="page">
+<span class="back" onclick="go('home')">← Back to Home</span>
+<div style="text-align:center;padding:10px 5%"><h2>Our Work</h2><p style="font-size:12px">Real clients, real sets</p></div>
+<div class="gallery">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTlOUEdSZD3yzQ15zcZZlNChEjpxv99a0Wu56dAVjSmg&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIPNowZSN3e7A_u_-rKqoWQGKArY20w_wN2V4SZB8TA&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCLTBqU_WjUI7KCm914J3FBDuVLk_BFmfL9D2JWt1z7A&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRdL15EAdp8-9nUHRFEPLtJH4c2ja5uzmfCgjbumCNvA&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsYtQWXWXVttRtmU9OW9oF8M-6A1tD2OQaLPk7jJvcQ&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH7K5kGnWTMDwEeh2zRzy08_zyvsfDGr7S9cS9ARrHyQ&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtU8f41FUW8exJ8gPJIOrI594TiDVMnMY_d9nDEjQbSw&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6B26kPnFxPimHb89wER2a3WucuZHr2-J33CkWm3mTQ&s=10" onclick="openLB(this.src)">
+</div>
+</div>
+
+
+<div id="testimonials" class="page">
+<span class="back" onclick="go('home')">← Back to Home</span>
+<div style="text-align:center;padding:10px 5%"><h2>Baddies Love Us 💖</h2></div>
+<div id="tGrid" class="grid3">
+<div class="card"><div style="color:var(--pink)">★★★★★</div><p style="font-size:13px;margin:8px 0">"Best nail tech in Lekki! My acrylics lasted 4 weeks no lift."</p><b style="font-size:11px">Chioma B.</b></div>
+<div class="card"><div style="color:var(--pink)">★★★★★</div><p style="font-size:13px;margin:8px 0">"So neat and clean. Chrome set ate!!"</p><b style="font-size:11px">Tolu A.</b></div>
+<div class="card"><div style="color:var(--pink)">★★★★★</div><p style="font-size:13px;margin:8px 0">"From booking to nails, 10/10. Will be back."</p><b style="font-size:11px">Zainab M.</b></div>
+</div>
+<div style="max-width:420px;margin:16px auto;background:white;padding:16px;border-radius:18px;border:1px solid #ffd6e7"><h4>Leave a Review</h4><input id="tName" placeholder="Your name"><textarea id="tText" placeholder="How was your set?"></textarea><button class="btn" style="width:100%" onclick="addT()">Post Review</button></div>
+</div>
+
+
+<div id="about" class="page">
+<span class="back" onclick="go('home')">← Back to Home</span>
+<div class="hero"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600" style="width:100%;height:360px;object-fit:cover;border-radius:24px"><div><h2>About Nails by Favy</h2><p style="font-size:13px;line-height:1.7;margin:10px 0">Started 2021 with a small table in my room. Now we have a full studio in Lekki. We specialize in clean, luxury, long-lasting sets. No rushing, no lifting, just perfect nails.<br><br>Tools sterilized, premium products, soft music, chilled drinks.</p><button class="btn" onclick="go('book')">Book Now</button></div></div>
+</div>
+
+
+<div id="book" class="page">
+<span class="back" onclick="go('home')">← Back to Home</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:12px 5%">
+<div class="card"><h3>Book Your Slot</h3><p style="font-size:11px;color:#8a5a6a;margin:6px 0">Fill and we confirm on WhatsApp</p><input id="bName" placeholder="Your Name"><input id="bPhone" placeholder="WhatsApp Number"><select id="bDate"><option>Today</option><option>Tomorrow</option><option>This Weekend</option></select><select id="bTime"><option>9:00 AM</option><option>11:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select><textarea id="bNote" placeholder="Inspo / design?"></textarea><button class="btn" style="width:100%" onclick="bookNow()">Confirm Booking on WhatsApp</button></div>
+<div class="card"><h3>Find Us</h3><p style="font-size:13px;line-height:1.7">📍 14b Fola Osibo, Lekki Phase 1<br>⏰ Mon-Sat 9am-8pm, Sun 12pm-7pm<br>📱 +234 9021228811<br>💖 Walk-ins allowed but booking preferred</p><iframe src="https://maps.google.com/maps?q=lekki%20phase%201&t=&z=14&ie=UTF8&iwloc=&output=embed" style="width:100%;height:200px;border:0;border-radius:16px;margin-top:10px"></iframe></div>
+</div>
+</div>
+
+
+<div class="cart" id="cart"><h4>Your Booking 🛒</h4><div id="cList" style="margin:10px 0"></div><hr><div style="display:flex;justify-content:space-between;margin-top:8px"><b>Total</b><b id="cTotal">₦0</b></div><button class="btn" style="width:100%;margin-top:10px" onclick="go('book')">Proceed to Book</button><button style="width:100%;background:none;border:none;color:#999;margin-top:6px;cursor:pointer" onclick="toggleCart()">Continue</button></div>
+<div id="lightbox" onclick="this.classList.remove('show')"><img id="lbImg"></div>
+<div id="toast"></div>
+<footer style="background:var(--dark);color:white;text-align:center;padding:16px;font-size:11px;margin-top:20px">© 2026 NAILED BY LÉA • Lekki Lagos • All pages linked</footer>
+
+<script>
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('l-'+id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+let cart=[];
+function add(n,p){let f=cart.find(i=>i.n===n);if(f)f.q++;else cart.push({n,p,q:1});upd();toast(n+" added")}
+function changeQty(i,d){cart[i].q+=d;if(cart[i].q<=0)cart.splice(i,1);upd()}
+function upd(){document.getElementById('cartN').innerText=cart.reduce((s,i)=>s+i.q,0);const l=document.getElementById('cList'),t=document.getElementById('cTotal');if(cart.length)document.getElementById('cart').classList.add('show');l.innerHTML=cart.map((it,i)=>`<div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;margin:8px 0;border-bottom:1px solid #ffe2ee;padding-bottom:6px"><div><b>${it.n}</b><br>₦${it.p.toLocaleString()} x ${it.q}</div><div style="display:flex;gap:6px;align-items:center"><button onclick="changeQty(${i},-1)" style="border:1px solid #ffd6e7;border-radius:50%;width:22px;height:22px;cursor:pointer">−</button><b>${it.q}</b><button onclick="changeQty(${i},1)" style="border:1px solid #ffd6e7;border-radius:50%;width:22px;height:22px;cursor:pointer">+</button></div></div>`).join('')||"<small>Cart empty</small>";t.innerText="₦"+cart.reduce((s,i)=>s+i.p*i.q,0).toLocaleString();if(!cart.length)document.getElementById('cart').classList.remove('show')}
+function toggleCart(){document.getElementById('cart').classList.toggle('show')}
+function openLB(s){document.getElementById('lbImg').src=s;document.getElementById('lightbox').classList.add('show')}
+function addT(){const name=document.getElementById('tName').value||"Baddie",txt=document.getElementById('tText').value;if(!txt){toast("Write review");return;}const g=document.getElementById('tGrid'),d=document.createElement('div');d.className='card';d.innerHTML=`<div style="color:var(--pink)">★★★★★</div><p style="font-size:13px;margin:8px 0">"${txt}"</p><b style="font-size:11px">${name}</b>`;g.prepend(d);toast("Posted! 💖");document.getElementById('tText').value=""}
+function bookNow(){const name=document.getElementById('bName').value||"Customer",phone=document.getElementById('bPhone').value,date=document.getElementById('bDate').value,time=document.getElementById('bTime').value,services=cart.map(i=>`${i.q}x ${i.n}`).join(', ')||"No service selected";if(!phone){toast("Add WhatsApp number");return;}window.open(`https://wa.me/2348000000000?text=Hi Léa! I'm ${name}. Booking for ${date} ${time}. Services: ${services}. My number: ${phone}`,"_blank")}
+function toast(t){let e=document.getElementById('toast');e.innerText=t;e.style.display='block';setTimeout(()=>e.style.display='none',2200)}
+// SLIDER LOGIC - CHANGING HOME IMAGE
+let idx=0; const imgs=document.querySelectorAll('#heroWrap img'); const dotsWrap=document.getElementById('dots');
+imgs.forEach((_,i)=>{let d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.onclick=()=>setSlide(i);dotsWrap.appendChild(d)});
+function setSlide(i){imgs[idx].classList.remove('active');dotsWrap.children[idx].classList.remove('active');idx=i;imgs[idx].classList.add('active');dotsWrap.children[idx].classList.add('active')}
+setInterval(()=>{let next=(idx+1)%imgs.length;setSlide(next)},3500);
+</script>
+</body>
+</html>

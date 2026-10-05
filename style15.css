@@ -1,0 +1,26 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+  header{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 50px;z-index:10}
+  .logo{color:#fff;font-weight:800;font-size:20px}
+  .logo small{display:block;font-size:9px;letter-spacing:4px;font-weight:400;color:#ddd}
+  .logo span{color:#f7c948}
+  nav{display:flex;gap:20px}
+  nav a{color:#ddd;text-decoration:none;font-size:11px;letter-spacing:1px}
+  nav a.active, nav a:hover{color:#f7c948}
+  .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://picsum.photos/1600/900') center/cover no-repeat;display:flex;align-items:center;justify-content:space-between;padding:120px 50px 50px;gap:40px}
+  .hero-text{color:#fff;max-width:600px}
+  .hero-text h1{font-size:48px;line-height:1.1;font-weight:900;margin-bottom:15px}
+  .hero-text p{font-size:13px;color:#ccc;line-height:1.7;margin-bottom:25px}
+  .buttons{display:flex;gap:12px}
+  .btn{padding:12px 24px;font-size:12px;font-weight:700;border:0;cursor:pointer}
+  .btn-primary{background:#f7c948;color:#000}
+  .btn-ghost{background:transparent;color:#f7c948;border:1px solid #f7c948}
+  .card{background:rgba(0,0,0,.75);padding:30px 25px;width:320px;color:#fff;text-align:center}
+  .card h3{font-size:13px;margin-bottom:20px;letter-spacing:.5px}
+  .card input{width:100%;padding:12px;margin-bottom:12px;border:0;font-size:13px}
+  .card p{font-size:10px;color:#aaa;margin:12px 0;line-height:1.5}
+  .card .btn{width:100%}
+  @media(max-width:900px){
+    .hero{flex-direction:column;padding:120px 20px 40px}
+    nav{display:none}
+    .hero-text h1{font-size:34px}
+  }

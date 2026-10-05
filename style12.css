@@ -1,0 +1,41 @@
+ * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', Arial, sans-serif; }
+  body { background:#fff5eb; display:flex; justify-content:center; padding:20px; }
+  .flyer {
+    width:400px; background: linear-gradient(180deg, #fff8f0 0%, #ffeedc 100%);
+    border-radius:20px; overflow:hidden; padding:24px 20px;
+    position:relative; text-align:center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .logo { font-size:32px; font-weight:800; }
+  .logo span { color:#00c853; } .logo b { color:#111; }
+  .headline {
+    font-size:58px; line-height:0.95; font-weight:900;
+    color:#e65100; margin:16px 0 8px;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(0,0,0,0.08);
+    transform: rotate(-2deg);
+  }
+  .sub { color:#d32f2f; font-weight:700; font-size:18px; margin-bottom:16px; }
+  .ribbon {
+    background: linear-gradient(90deg, #ff3d00, #ff9100);
+    color:#fff; text-align:left; padding:14px 18px;
+    border-radius:4px 30px 4px 30px; font-size:14px; line-height:1.5;
+    margin:0 -20px 20px -20px;
+  }
+  .ribbon b { color:#ffeb3b; }
+  .food { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
+  .bowl {
+    width:110px; height:110px; background:#fff; border-radius:50%;
+    border:6px solid #fff; box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    display:flex; align-items:center; justify-content:center; font-size:40px;
+  }
+  .bucket {
+    width:160px; height:140px; background:#d32f2f; border-radius:12px 12px 20px 20px;
+    color:#ffeb00; font-weight:900; font-size:28px; display:flex;
+    align-items:center; justify-content:center; margin:0 auto 20px;
+  }
+  .cta { text-align:left; margin-top:10px; }
+  .cta p { font-size:14px; font-weight:700; margin-bottom:10px; }
+  .stores { display:flex; gap:8px; margin-bottom:10px; }
+  .store-btn { background:#111; color:#fff; font-size:11px; padding:8px 10px; border-radius:6px; }
+  .web { display:inline-block; background:#00e676; color:#000; font-size:13px; font-weight:700; padding:6px 12px; border-radius:20px; text-decoration:none; }
+  .arrow { font-size:36px; color:#e60000; transform: rotate(45deg); display:inline-block; }

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happiness Bakery</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="another.css">
+</head>
+<body>
+
+<div class="page">
+  <nav>
+    <div class="logo"><span></span> Happiness Bakery</div>
+    <div class="links">
+      <a href="#">Home ▼</a>
+      <a href="# menu">Menu</a>
+      <a href="# packages">Packages</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About ▼</a>
+    </div>
+    <a href="#order-form" class="nav-btn">Order Now</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <h1>Sweet<br>Moments<br>Start Here</h1>
+      <a href="#favorites" class="hero-btn">SHOP NOW</a>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1488477181946-64290103bbd6?q=80&w=800" alt="flan">
+    </div>
+  </div>
+
+  <div class="white-card" id="packages">
+    
+    <div class="second-row">
+      <div class="second-left">
+        <p class="mini">— HAPPINESS BAKERY</p>
+        <h2>Sweet Moments<br>Didery Here</h2>
+        <p class="desc">Freshly baked bread, crunchy snacks and curated packages made daily in Lagos. Soft loaves, small chops, and party bundles for every moment.</p>
+        <a href="#" class="outline">VIEW PACKAGES</a>
+      </div>
+      <div class="second-right">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=700" alt="chocolate cake">
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feat brown"><h4>Fresh Baked</h4><p>All bread and snacks baked this morning, never yesterday.</p></div>
+      <div class="feat"><h4>Same Day Delivery</h4><p>Lagos delivery within 2 hours. Hot and fresh to your door.</p></div>
+      <div class="feat"><h4>Party Packages</h4><p>Custom packages for birthdays, meetings and family weekends.</p></div>
+    </div>
+
+    <div class="favorites" id="favorites">
+      <h2>Your Favorite Cakes</h2>
+      <p>Happiness Bakery - Fresh from oven to your home</p>
+    </div>
+
+    <div class="grid">
+      <div class="cake-card">
+        <div class="tag">Bread</div>
+        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=400" alt="bread">
+        <h3>Butter Loaf</h3>
+        <p>Soft family loaf, fluffy inside. Perfect for breakfast.</p>
+        <div class="price">₦1,500</div>
+      </div>
+      <div class="cake-card">
+        <div class="tag">Snack</div>
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=400" alt="snack">
+        <h3>Meat Pie & Roll</h3>
+        <p>Spicy meat pie and sausage roll baked golden brown.</p>
+        <div class="price">₦600</div>
+      </div>
+      <div class="cake-card">
+        <div class="tag">Package</div>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=400" alt="package">
+        <h3>Party Package</h3>
+        <p>50 Small chops + 20 Pies + 2 Loaves - Best seller for events.</p>
+        <div class="price">₦28,000</div>
+      </div>
+    </div>
+
+    <!-- FORM SECTION -->
+    <div id="order-form" class="form-section">
+      <div class="form-left">
+        <h2>Place Your<br>Order Here</h2>
+        <p>Fill the form and we will call you within 30 minutes. Delivery in Lagos only.</p>
+        <div class="contact-box">
+          <p>📞 0800 123 4567</p>
+          <p>📍 Lagos, Nigeria</p>
+          <p>📧 hello@happinessbakery.ng</p>
+          <p>⏰ 7am - 9pm Daily</p>
+        </div>
+      </div>
+
+      <div class="form-right">
+        <form action="#" method="post">
+          
+          <label for="name" class="label">Full Name</label>
+          <input type="text" id="name" name="fullname" placeholder="Enter your full name" required class="input">
+
+          <label for="phone" class="label">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="0800 000 0000" required class="input">
+
+          <label for="email" class="label">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" class="input">
+
+          <label for="item" class="label">What do you want to order?</label>
+          <select id="item" name="item" required class="input">
+            <option value="">-- Select Item --</option>
+            <option value="butter-loaf">Butter Loaf - ₦1,500</option>
+            <option value="wheat-bread">Wheat Bread - ₦1,800</option>
+            <option value="meat-pie">Meat Pie & Roll - ₦600</option>
+            <option value="doughnut">Doughnut 4pcs - ₦2,500</option>
+            <option value="party">Party Package - ₦28,000</option>
+            <option value="family">Family Weekend - ₦15,000</option>
+          </select>
+
+          <label for="quantity" class="label">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required class="input small-input">
+
+          <label for="address" class="label">Delivery Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Enter your full address in Lagos" required class="textarea"></textarea>
+
+          <label for="note" class="label">Extra Note (Optional)</label>
+          <textarea id="note" name="note" rows="2" placeholder="e.g. No onions, deliver by 2pm" class="textarea"></textarea>
+
+          <div class="check-row">
+            <input type="checkbox" id="agree" name="agree" required class="checkbox">
+            <label for="agree" class="check-label">I agree to pay on delivery</label>
+          </div>
+
+          <button type="submit" class="submit-btn">Place Order Now</button>
+          <p class="form-foot">We will confirm via WhatsApp or call</p>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

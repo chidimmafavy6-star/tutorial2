@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRIP LAGOS®</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style113.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <div class="logo">DRIP LAGOS®</div>
+  <div class="links"><span id="goShop">SHOP</span><span id="goForm">ORDER</span></div>
+  <div class="cart" id="cart">CART [<span id="count">0</span>]</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>WASHED IN<br><span>YABA.</span><br>WORN IN<br>SOHO.</h1>
+    <p>100 pieces per drop. No restock. Click any button — everything works.</p>
+    <div class="btn-row">
+      <button class="main-btn" id="shopBtn">SHOP DROP 02 →</button>
+      <button class="sec-btn" id="lookBtn">SEE LOOKBOOK</button>
+    </div>
+    
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800" class="img1">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800" class="img2">
+      <div class="float-tag">DROP 02 • 11 LEFT</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track"><span> NO RESTOCK • WORLDWIDE SHIPPING • 100 PCS ONLY • LAGOS MADE • </span><span> NO RESTOCK • WORLDWIDE SHIPPING • 100 PCS ONLY • LAGOS MADE • </span><span> NO RESTOCK • WORLDWIDE SHIPPING • 100 PCS ONLY • LAGOS MADE • </span></div></div>
+
+<section class="products" id="products">
+  <div class="prod" data-name="SAINT HOODIE"><div class="img-wrap"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600" class="p1"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600" class="p2"><div class="badge">BESTSELLER</div></div><h4>SAINT HOODIE - WASHED BLACK</h4><p>450gsm • Puff Print</p><div class="row"><b>₦35,000</b><button class="add">+ ADD</button></div><button class="view-btn">VIEW DETAILS</button></div>
+  <div class="prod" data-name="AURA CARGO"><div class="img-wrap"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600" class="p1"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600" class="p2"><div class="badge new">NEW</div></div><h4>AURA CARGO - OLIVE</h4><p>12 pockets • Washed</p><div class="row"><b>₦42,000</b><button class="add">+ ADD</button></div><button class="view-btn">VIEW DETAILS</button></div>
+  <div class="prod" data-name="VOID TEE"><div class="img-wrap"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" class="p1"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600" class="p2"></div><h4>VOID TEE - BONE</h4><p>260gsm • Crack Print</p><div class="row"><b>₦18,000</b><button class="add">+ ADD</button></div><button class="view-btn">VIEW DETAILS</button></div>
+</section>
+
+
+<section class="form-section" id="formSection">
+  <div class="form-left"><h2>ORDER<br>FORM</h2><p>Fill this, we deliver in 90 mins in Lagos. Outside Lagos 2-3 days.</p><div class="contact-btns"><button class="c-btn" id="waBtn">WHATSAPP US</button><button class="c-btn dark" id="callBtn">CALL US</button></div></div>
+  <form class="order-form" id="orderForm">
+    <label>Full Name</label><input type="text" id="name" placeholder="Tolu Adebayo" required>
+    <label>Phone Number</label><input type="tel" id="phone" placeholder="09021228811" required>
+    <label>Address (Lagos)</label><input type="text" id="address" placeholder="12 Allen Ave, Ikeja" required>
+    <label>Select Item</label><select id="itemSelect"><option>SAINT HOODIE - ₦35,000</option><option>AURA CARGO - ₦42,000</option><option>VOID TEE - ₦18,000</option></select>
+    <label>Size</label><div class="size-pick"><span class="sp" data-s="S">S</span><span class="sp active" data-s="M">M</span><span class="sp" data-s="L">L</span><span class="sp" data-s="XL">XL</span></div>
+    <label>Quantity</label><input type="number" id="qty" value="1" min="1">
+    <button type="submit" class="submit-btn">PLACE ORDER — PAY ON DELIVERY →</button>
+    <p class="form-msg" id="formMsg"></p>
+  </form>
+</section>
+
+<footer><h2>DRIP<br>LAGOS</h2><p>©2026 — IF YOU MISS IT, YOU MISS IT.</p></footer>
+
+<script src="script113.js"></script>
+</body>
+</html>

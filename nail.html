@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMIÈRE NAILS | Luxury Nail Studio Lagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f5c6c8;--beige:#fdf6f0;--brown:#5a3e36}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--beige)}
+h1,h2{font-family:'Playfair Display',serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:#fff7f3;position:sticky;top:0;z-index:10}
+.logo{letter-spacing:2px;color:#c08a8c;font-weight:600}
+.btn{background:var(--pink);padding:12px 24px;border-radius:30px;border:none;cursor:pointer;font-weight:500}
+.hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:30px;padding:50px 6%;background:#fff7f3}
+.hero h1{font-size:46px;margin:15px 0}
+.hero img{width:100%;height:400px;object-fit:cover;border-radius:24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:20px 6%}
+.card{background:white;border:1px solid #f1e2de;padding:22px;border-radius:16px;cursor:pointer;transition:0.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,0.06);border-color:var(--pink)}
+.card.active{border:2px solid var(--pink);background:#fff5f5}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:30px 6%}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:14px;cursor:pointer;transition:0.2s}
+.gallery img:hover{scale:1.02}
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;z-index:99}
+.modal.show{display:flex}
+.modal-box{background:white;padding:30px;border-radius:20px;width:90%;max-width:400px}
+.modal-box input, .modal-box select{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1px solid #e9d5d2}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--brown);color:white;padding:12px 24px;border-radius:30px;display:none;z-index:100}
+footer{background:var(--brown);color:#f7e9e6;padding:30px 6%;text-align:center;margin-top:40px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">LUMIÈRE NAILS</div>
+<button class="btn" onclick="openBooking()">Book Now</button>
+</nav>
+
+<section class="hero">
+<div>
+<span style="background:#f9d9db;padding:6px 14px;border-radius:20px;font-size:11px">✨ LUXURY NAIL STUDIO • LAGOS</span>
+<h1>Luxurious Nails,<br>Effortlessly Elevated</h1>
+<p style="color:#6b5a55;line-height:1.6;margin-bottom:20px">Bespoke designs, clean beauty & calm space. Select a service below to book instantly.</p>
+<button class="btn" onclick="openBooking()">Book Your Appointment →</button>
+</div>
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800" />
+</section>
+
+<div style="text-align:center;padding:20px"><h2>Our Services — Click to Select</h2><p id="selectedText" style="color:#c08a8c;margin-top:6px">No service selected yet</p></div>
+
+<div class="grid" id="services">
+<div class="card" onclick="selectService(this,'Gel Manicure - ₦15,000')"><h3>Gel Manicure</h3><p>Classic color + cuticle care</p><b>₦15,000 • 60min</b></div>
+<div class="card" onclick="selectService(this,'Nail Art - ₦20,000')"><h3>Nail Art Design</h3><p>Chrome, 3D, baddie bling</p><b>₦20,000 • 75min</b></div>
+<div class="card" onclick="selectService(this,'Spa Pedicure - ₦18,000')"><h3>Spa Pedicure</h3><p>Soak, scrub, massage & polish</p><b>₦18,000 • 60min</b></div>
+<div class="card" onclick="selectService(this,'Extensions - ₦25,000')"><h3>Extensions & Acrylic</h3><p>Natural length & strength</p><b>₦25,000 • 90min</b></div>
+<div class="card" onclick="selectService(this,'Paraffin - ₦7,000')"><h3>Luxury Paraffin</h3><p>Hydrating soft skin treatment</p><b>₦7,000 • 30min</b></div>
+<div class="card" onclick="selectService(this,'Repair - ₦10,000')"><h3>Nail Repair</h3><p>Strengthening & care</p><b>₦10,000 • 45min</b></div>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=400" onclick="zoomImg(this.src)">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=400" onclick="zoomImg(this.src)">
+<img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=400" onclick="zoomImg(this.src)">
+<img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=400" onclick="zoomImg(this.src)">
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="bookingModal">
+<div class="modal-box">
+<h2>Book Appointment</h2>
+<p id="serviceDisplay" style="color:#c08a8c;margin:8px 0"></p>
+<input id="clientName" placeholder="Your Name">
+<input id="clientDate" type="date">
+<select id="clientTime"><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option><option>6:00 PM</option></select>
+<button class="btn" style="width:100%;margin-top:10px" onclick="confirmBooking()">Confirm on WhatsApp</button>
+<button style="width:100%;margin-top:8px;background:none;border:none;color:#888;cursor:pointer" onclick="closeBooking()">Cancel</button>
+</div>
+</div>
+
+<!-- IMAGE ZOOM MODAL -->
+<div class="modal" id="imgModal" onclick="this.classList.remove('show')"><img id="zoomed" style="max-width:90%;max-height:90%;border-radius:16px"></div>
+
+<div id="toast">Booked! Check WhatsApp</div>
+
+<footer>© 2026 LUMIÈRE NAILS • Lekki, Lagos • IG @lumierenails</footer>
+
+<script>
+// SELECT SERVICE
+let selectedService = "";
+function selectService(el, name){
+  document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  selectedService = name;
+  document.getElementById('selectedText').innerText = "Selected: " + name + " ✓";
+  showToast(name + " selected");
+  openBooking();
+}
+
+// OPEN/CLOSE MODAL
+function openBooking(){
+  document.getElementById('serviceDisplay').innerText = selectedService ? "Service: " + selectedService : "Choose a service in form";
+  document.getElementById('bookingModal').classList.add('show');
+}
+function closeBooking(){ document.getElementById('bookingModal').classList.remove('show'); }
+
+// CONFIRM -> WHATSAPP
+function confirmBooking(){
+  const name = document.getElementById('clientName').value || "Client";
+  const date = document.getElementById('clientDate').value || "ASAP";
+  const time = document.getElementById('clientTime').value;
+  const service = selectedService || document.getElementById('serviceDisplay').innerText;
+  if(!name){ showToast("Please enter your name"); return; }
+  const msg = `Hi Lumière Nails! 💅 I want to book:\nName: ${name}\nService: ${service}\nDate: ${date}\nTime: ${time}`;
+  const waLink = `https://wa.me/2348000000000?text=${encodeURIComponent(msg)}`;
+  showToast("Opening WhatsApp...");
+  setTimeout(()=>{ window.open(waLink, "_blank"); closeBooking(); }, 800);
+}
+
+// IMAGE ZOOM
+function zoomImg(src){
+  document.getElementById('zoomed').src = src;
+  document.getElementById('imgModal').classList.add('show');
+}
+
+// TOAST
+function showToast(t){
+  const toast = document.getElementById('toast');
+  toast.innerText = t;
+  toast.style.display = "block";
+  setTimeout(()=> toast.style.display="none", 2500);
+}
+
+// AUTO DATE = TOMORROW
+const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+document.getElementById('clientDate').valueAsDate = tomorrow;
+</script>
+</body>
+</html>

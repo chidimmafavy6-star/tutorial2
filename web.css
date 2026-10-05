@@ -1,0 +1,86 @@
+:root {
+    --pink: #FF6B9D;
+    --light-pink: #FFF0F5;
+    --brown: #3E2F2F;
+    --white: #fff;
+  }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Poppins', sans-serif; color: var(--brown); background: var(--white); }
+
+  /* NAVBAR */
+  header {
+    background: var(--light-pink);
+    padding: 15px 8%;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .logo { font-family: 'Fredoka', sans-serif; font-size: 1.8rem; color: var(--pink); font-weight: 700; }
+  .logo span { font-size: 0.7rem; display: block; letter-spacing: 2px; }
+  nav a { margin: 0 12px; text-decoration: none; color: var(--brown); font-weight: 600; }
+  nav a.active { color: var(--pink); border-bottom: 2px solid var(--pink); }
+  .nav-icons { display: flex; gap: 15px; }
+  .cart { position: relative; }
+  .cart-badge { position: absolute; top: -8px; right: -8px; background: var(--pink); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 50%; }
+
+  /* HERO */
+  .hero {
+    background: var(--light-pink);
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23fff" d="M0 120L48 105C96 90 192 60 288 50C384 40 480 50 576 60C672 70 768 80 864 75C960 70 1056 50 1152 45C1248 40 1344 50 1392 55L1440 60V120H0Z"/></svg>');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 80px;
+  }
+  .hero h5 { color: var(--pink); font-weight: 600; letter-spacing: 1px; }
+  .hero h1 { font-family: 'Fredoka', sans-serif; font-size: 3rem; margin: 10px 0; line-height: 1.1; }
+  .hero p { margin-bottom: 25px; max-width: 400px; }
+  .btn { padding: 12px 25px; border-radius: 25px; border: none; font-weight: 600; cursor: pointer; }
+  .btn-pink { background: var(--pink); color: #fff; }
+  .btn-white { background: #fff; color: var(--brown); border: 1px solid #ddd; margin-left: 10px; }
+  .hero-img { text-align: center; }
+  .hero-img img { max-width: 100%; }
+
+  /* FEATURES */
+  .features { display: grid; grid-template-columns: repeat(4, 1fr); padding: 60px 8%; text-align: center; gap: 20px; }
+  .feature-icon { font-size: 2rem; color: var(--pink); margin-bottom: 10px; }
+
+  /* POPULAR FLAVORS */
+  .section-title { text-align: center; font-family: 'Fredoka', sans-serif; font-size: 2rem; margin-bottom: 30px; }
+  .flavors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; padding: 0 8% 60px; }
+  .flavor-card { background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; padding-bottom: 15px; }
+  .flavor-card img { width: 100%; border-radius: 15px 15px 0 0; }
+  .flavor-card h4 { margin: 15px 0 5px; }
+  .price { font-weight: 700; margin-bottom: 10px; }
+  .add-cart { background: var(--pink); color: #fff; border: none; padding: 8px 20px; border-radius: 20px; cursor: pointer; }
+
+  /* OFFER BANNER */
+  .offer {
+    background: var(--light-pink);
+    margin: 0 8% 60px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .offer h2 { font-family: 'Fredoka', sans-serif; font-size: 2rem; }
+  .badge { background: var(--pink); color: #fff; padding: 20px; border-radius: 50%; font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--light-pink); padding: 50px 8%; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 20px; }
+  footer h4 { margin-bottom: 15px; }
+  footer a { display: block; text-decoration: none; color: var(--brown); margin-bottom: 8px; font-size: 0.9rem; }
+  .subscribe input { padding: 10px; border: 1px solid #ddd; border-radius: 20px 0 0 20px; }
+  .subscribe button { padding: 10px 15px; background: var(--pink); color: #fff; border: none; border-radius: 0 20px 20px 0; cursor: pointer; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero, .features, .flavors, .footer-grid { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hero, .features, .flavors, .footer-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+  }

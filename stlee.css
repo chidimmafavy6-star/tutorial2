@@ -1,0 +1,26 @@
+@keyframes Chidimma{ 
+    0%{
+        background-image: url(media/my\ img.jpeg);
+        width: 600px;
+        height: 600px;
+    } 
+    25%{
+        background-image: url(media/IMG2.jpeg);
+        width: 400px;
+        height: 400px; 
+    }
+    50%{
+        background-image: url(media/my\ picture.jpeg);
+    }
+    100%{
+        background-image: url(media/img.jpj.jpeg);
+    }
+}
+.box{
+    background-image: url(media/img3.jpeg);
+
+    animation-name: Chidimma;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }  
+ 

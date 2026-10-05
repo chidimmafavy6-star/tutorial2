@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Favy Burger  - Dashboard</title>
+<link rel="stylesheet" href="style13.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>🍔Favy BURGER </h2>
+    <a href="#" class="active">Dashboard</a>
+    <a href="#">Orders</a>
+    <a href="#">Menu</a>
+    <a href="#">Customers</a>
+    <a href="#">Analytics</a>
+  </div>
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="header">
+      <h1>Dashboard</h1>
+      <p>Welcome back, Admin 👋</p>
+    </div>
+    <!-- STAT CARDS -->
+    <div class="cards">
+      <div class="card">
+        <h3>Total Orders Today</h3>
+        <h1 id="totalOrders">42</h1>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <h1 id="revenue">₦168,000</h1>
+      </div>
+      <div class="card">
+        <h3>Pending Orders</h3>
+        <h1 id="pending">5</h1>
+      </div>
+      <div class="card">
+        <h3>Customers</h3>
+        <h1 id="customers">28</h1>
+      </div>
+    </div>
+    <!-- ORDERS TABLE -->
+    <h2>Recent Orders</h2>
+    <table id="ordersTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Item</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will fill this -->
+      </tbody>
+    </table>
+  </div>
+
+<script>
+// FAKE DATA - Later we connect to database
+let orders = [
+  {id: "#1021", customer: "John Doe", item: "Cheese Melt + Fries", amount: 4500, status: "pending"},
+  {id: "#1020", customer: "Aisha Bello", item: "Spicy Inferno", amount: 4200, status: "done"},
+  {id: "#1019", customer: "Mike Johnson", item: "Classic Burger x2", amount: 7000, status: "pending"},
+  {id: "#1018", customer: "Sarah Lee", item: "Veggie Delight", amount: 3800, status: "done"},
+];
+
+// 1. LOAD ORDERS INTO TABLE
+function loadOrders() {
+  let tbody = document.querySelector("#ordersTable tbody");
+  tbody.innerHTML = "";
+  
+  orders.forEach(order => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${order.id}</td>
+        <td>${order.customer}</td>
+        <td>${order.item}</td>
+        <td>₦${order.amount.toLocaleString()}</td>
+        <td><span class="status ${order.status}">${order.status}</span></td>
+        <td><button class="btn" onclick="markDone('${order.id}')">Mark Done</button></td>
+      </tr>
+    `;
+  });
+  updateStats();
+}
+
+// 2. MARK ORDER AS DONE
+function markDone(id) {
+  let order = orders.find(o => o.id === id);
+  if(order) order.status = "done";
+  loadOrders();
+  alert(`Order ${id} marked as done!`);
+}
+
+// 3. UPDATE STATS CARDS
+function updateStats() {
+  let total = orders.length;
+  let revenue = orders.reduce((sum, o) => sum + o.amount, 0);
+  let pending = orders.filter(o => o.status === "pending").length;
+  
+  document.getElementById("totalOrders").innerText = total;
+  document.getElementById("revenue").innerText = `₦${revenue.toLocaleString()}`;
+  document.getElementById("pending").innerText = pending;
+}
+
+// RUN ON PAGE LOAD
+loadOrders();
+</script>
+
+</body>
+</html>

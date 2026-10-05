@@ -1,0 +1,122 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#fff0f5
+}
+header{
+    background:#fff;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+}
+.logo{
+    color:#ff0066;
+    font-weight:800;
+    font-size:22px
+}
+nav button{
+    margin-left:8px;
+    padding:8px 14px;
+    border-radius:20px;
+    border:1px solid #ff0066;
+    background:white;
+    color:#ff0066;
+    cursor:pointer;
+    font-weight:bold
+}
+nav .cart-btn{
+    background:#ff0066;
+    color:white
+}
+.section{
+    display:none;
+    padding:25px 5%
+}
+.section.active{
+    display:block
+}
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px
+}
+.card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05)
+}
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:10px
+}
+.card h4{
+    margin:10px 0 5px
+}
+.card p{
+    color:#ff0066;
+    font-weight:bold
+}
+.card button{
+    width:100%;
+    background:#ff0066;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:20px;
+    cursor:pointer;
+    margin-top:8px
+}
+.form-box{
+    background:white;
+    max-width:380px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08)
+}
+.form-box h2{
+    color:#ff0066;
+    text-align:center
+}
+.form-box input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ddd;
+    box-sizing:border-box
+}
+.form-box button{
+    width:100%;
+    padding:12px;
+    background:#ff0066;
+    color:white;
+    border:none;
+    border-radius:25px;
+    margin-top:10px;
+    cursor:pointer;
+    font-weight:bold
+}
+.form-box .outline{
+    background:white;
+    color:#ff0066;
+    border:1px solid #ff0066}
+.form-box small span{
+    color:#ff0066;
+    cursor:pointer;
+    font-weight:bold
+}
+#cart-items div{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid #eee
+}

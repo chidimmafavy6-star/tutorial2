@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOYBOX LAGOS — Toys That Make Noise</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style121.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">TOYBOX<span>🧸</span></div>
+  <div class="navlinks"><span id="goShop">SHOP</span><span id="goAge">BY AGE</span><span id="goGift">GIFT FINDER</span></div>
+  <div class="cart" id="cart">CART [<span id="count">0</span>] 🎈</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="pill">✨ FREE DELIVERY IN LAGOS TODAY</div>
+    <h1>TOYS THAT<br><span>SCREAM</span><br>JOY!</h1>
+    <p>From teddy to Tesla cars for kids. No boring toys. Only the ones kids will not drop after 5 minutes.</p>
+    <div class="btn-row"><button class="main-btn" id="shopBtn">SHOP NOW 🎁</button><button class="sec-btn" id="ageBtn">SHOP BY AGE</button></div>
+    <div class="trust"><span>⭐ 4.9/5 from 2k parents</span><span>🚚 Same day delivery</span></div>
+  </div>
+  <div class="hero-right">
+    <div class="toy-stack"><div class="toy-card c1">🚗<p>Race Cars</p></div><div class="toy-card c2">🧸<p>Plushies</p></div><div class="toy-card c3">🧩<p>Puzzles</p></div></div>
+  </div>
+</section>
+
+<section class="filter-bar" id="ageBar">
+  <button class="filter active" data-age="all">ALL</button><button class="filter" data-age="0-2">0-2 YRS</button><button class="filter" data-age="3-5">3-5 YRS</button><button class="filter" data-age="6-9">6-9 YRS</button><button class="filter" data-age="10+">10+ YRS</button>
+</section>
+
+<section class="products" id="products">
+  <div class="prod" data-age="3-5" data-name="Talking Teddy"><div class="img-box"><div class="emoji">🧸</div><div class="badge">BESTSELLER</div></div><h4>TALKING TEDDY — SAYS I LOVE YOU</h4><p>Soft plush • 3-5 yrs • Battery included</p><div class="row"><b>₦12,000</b><button class="add">ADD TO BOX</button></div><button class="view-btn">VIEW DETAILS</button></div>
+  <div class="prod" data-age="6-9" data-name="RC Tesla Car"><div class="img-box c2"><div class="emoji">🚗</div><div class="badge new">NEW</div></div><h4>RC TESLA — DRIFTS FOR REAL</h4><p>Rechargeable • 6-9 yrs • Remote</p><div class="row"><b>₦28,500</b><button class="add">ADD TO BOX</button></div><button class="view-btn">VIEW DETAILS</button></div>
+  <div class="prod" data-age="0-2" data-name="Musical Mat"><div class="img-box c3"><div class="emoji">🎹</div></div><h4>MUSICAL MAT — STEP & PLAY</h4><p>Piano mat • 0-2 yrs • Sensory</p><div class="row"><b>₦15,000</b><button class="add">ADD TO BOX</button></div><button class="view-btn">VIEW DETAILS</button></div>
+  <div class="prod" data-age="10+" data-name="Robot Builder"><div class="img-box c4"><div class="emoji">🤖</div></div><h4>ROBOT BUILDER KIT</h4><p>STEM • 10+ yrs • 120 pcs</p><div class="row"><b>₦22,000</b><button class="add">ADD TO BOX</button></div><button class="view-btn">VIEW DETAILS</button></div>
+</section>
+
+<section class="form-section" id="formSection">
+  <div class="form-left"><h2>GIFT<br>FINDER</h2><p>Tell us the kid age and budget, we pick the perfect toy in 30 seconds.</p><div class="gift-preview" id="giftPreview">🎁 Your gift will appear here</div><button class="c-btn" id="waBtn">CHAT ON WHATSAPP</button></div>
+  <form class="order-form" id="giftForm">
+    <label>Parent Name</label><input type="text" id="name" required placeholder="Mama Tobi">
+    <label>Kid Age</label><select id="kidAge"><option>0-2 Years</option><option>3-5 Years</option><option>6-9 Years</option><option>10+ Years</option></select>
+    <label>Budget</label><select id="budget"><option>Under ₦15k</option><option>₦15k - ₦30k</option><option>₦30k+</option></select>
+    <label>Phone Number</label><input type="tel" id="phone" required placeholder="080...">
+    <label>Delivery Address</label><input type="text" id="address" required placeholder="Lekki Phase 1">
+    <button type="submit" class="submit-btn">FIND MY GIFT →</button>
+    <p class="form-msg" id="formMsg"></p>
+  </form>
+</section>
+
+<footer><h2>TOYBOX</h2><p>MADE FOR LAGOS KIDS — NO BORING TOYS ALLOWED</p></footer>
+
+<script src="script121.js"></script>
+</body>
+</html>

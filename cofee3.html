@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Favorite Coffee Mart</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#4E1120;overflow-x:hidden}
+html{scroll-behavior:smooth}
+
+/* NAV */
+.navbar{
+  width:100%;height:68px;background:#7a1230;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 35px;position:sticky;top:0;z-index:100
+}
+.logo{color:white;font-weight:900}
+.nav a{
+  color:white;text-decoration:none;margin-left:18px;
+  font-size:13px;padding:7px 14px;border-radius:20px;
+  transition:0.3s;
+}
+.nav a:hover{background:#FFC107;color:#4E1120;font-weight:bold;transform:translateY(-2px)}
+
+/* HERO */
+.hero{display:flex;justify-content:space-between;align-items:center;padding:80px 45px;color:white}
+.hero-left{width:48%}
+.hero-left h3{color:#FFC107;font-size:32px;font-style:italic;margin-bottom:10px}
+.hero-left h1{font-size:50px;line-height:1.1;font-weight:900;margin-bottom:16px}
+.hero-left p{color:#f1cbd6;font-size:14px;line-height:1.7;margin-bottom:25px;width:90%}
+.btn-y{background:#FFC107;color:#4E1120;border:0;padding:13px 26px;border-radius:25px;font-weight:900;cursor:pointer}
+.btn-o{background:transparent;color:white;border:1px solid white;padding:13px 26px;border-radius:25px;font-weight:900;cursor:pointer;margin-left:10px}
+.hero-right{width:48%;display:flex;justify-content:center}
+.hero-right img{width:100%;max-width:520px;border-radius:16px;background:white}
+
+/* ABOUT */
+.about{background:white;display:flex;justify-content:space-between;padding:80px 45px;color:#111}
+.about-left{width:38%}.about-left h1{font-size:50px;font-weight:900}
+.about-right{width:52%}.about-right p{font-size:14px;color:#666;line-height:1.8;margin-bottom:12px}
+.btn-story{background:#FFC107;border:0;padding:11px 22px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer;margin:10px 0 25px 0}
+.stats{display:flex;gap:30px;border-top:1px solid #eee;padding-top:20px}
+.stats h4{font-size:13px}.stats p{font-size:11px;color:#999}
+
+/* MENU */
+.menu{background:#FFF9F1;padding:70px 40px;text-align:center;color:#111}
+.grid{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px}
+.card{width:230px;background:white;border:1px solid #f0d8c5;border-radius:14px;padding:15px;cursor:pointer}
+.card:hover{border-color:#FFC107;transform:translateY(-4px)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.card span{color:#7a1230;font-weight:900;display:block;margin-top:8px}
+.btn-small{background:#4E1120;color:white;border:0;padding:9px 18px;border-radius:15px;font-size:12px;font-weight:bold;cursor:pointer;margin-top:10px}
+
+/* TESTIMONIALS */
+.testi{background:white;padding:70px 40px;text-align:center;color:#111}
+.testi-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:25px}
+.t-box{width:300px;background:#FFF9F1;border:1px solid #f5e0c8;border-radius:12px;padding:20px}
+
+/* GALLERY */
+.gallery{background:#4E1120;padding:70px 40px;text-align:center;color:white}
+.gal-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:30px}
+.gal{width:220px;height:180px;position:relative;overflow:hidden;border-radius:12px;background:white}
+.gal img{width:100%;height:100%;object-fit:cover}
+.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;justify-content:center;align-items:center;opacity:0;transition:0.3s}
+.gal:hover.overlay{opacity:1}
+.btn-view{background:#FFC107;color:#4E1120;border:0;padding:9px 20px;border-radius:20px;font-weight:bold;cursor:pointer}
+
+/* CONTACT */
+.contact{background:#FFF9F1;padding:70px 40px;display:flex;justify-content:space-between;color:#111}
+.contact-left{width:40%}
+.input{width:100%;max-width:400px;height:44px;padding-left:12px;border:1px solid #ccc;border-radius:8px;margin-top:10px;display:block}
+.textarea{width:100%;max-width:400px;height:100px;padding:12px;border:1px solid #ccc;border-radius:8px;margin-top:10px;display:block}
+
+/* FOOTER */
+footer{background:#3a0c19;color:#e8b9c6;padding:50px 40px 20px 40px}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+.foot-row a{color:#e8b9c6;text-decoration:none;display:block;margin-top:6px;font-size:13px}
+.foot-row a:hover{color:#FFC107}
+.copy{text-align:center;margin-top:40px;font-size:12px;border-top:1px solid #5a1a2d;padding-top:20px}
+
+/* MODALS */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:300;justify-content:center;align-items:center}
+.modal-box{width:90%;max-width:650px;background:white;border-radius:16px;padding:30px;max-height:85vh;overflow-y:auto;color:#111}
+.modal img{max-width:85%;max-height:85%;border-radius:12px}
+.close{position:absolute;top:20px;right:30px;color:white;font-size:40px;cursor:pointer}
+
+/* CART PAGE INSIDE */
+.cart-page{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#FFF9F1;z-index:250;overflow-y:auto;padding:30px 20px}
+.cart-item{width:100%;max-width:600px;background:white;border:1px solid #f0d8c5;border-radius:12px;display:flex;justify-content:space-between;align-items:center;padding:15px 20px;margin:12px auto}
+.qty{display:flex;align-items:center;gap:8px}
+.q-btn{width:32px;height:32px;background:#4E1120;color:white;border:0;border-radius:50%;font-weight:bold;cursor:pointer}
+.q-btn.minus{background:#eee;color:#111}
+.q-num{width:28px;text-align:center;font-weight:bold}
+.remove{background:#ff4444;color:white;border:0;padding:6px 12px;border-radius:8px;cursor:pointer;margin-left:10px;font-size:12px}
+.cart-float{position:fixed;bottom:20px;right:20px;background:#FFC107;color:#4E1120;padding:13px 22px;border-radius:30px;font-weight:900;cursor:pointer;z-index:200}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">☕ YOUR FAVORITE COFFEE MART</div>
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a href="#" onclick="openCart()">Cart 🛒 (<span id="navCount">0</span>)</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-left">
+    <h3>Best Coffee in Lagos</h3>
+    <h1>Make your day great with our special coffee!</h1>
+    <p>Welcome to YOUR FAVORITE COFFEE MART — roasted in Yaba, loved across Lagos. 100% Arabica, no fake flavors.</p>
+    <button class="btn-y" onclick="document.getElementById('menu').scrollIntoView()">Order Now</button>
+    <button class="btn-o" onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600" alt="Coffee">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-left"><h1>WE DON'T DO DECAF.</h1><p style="color:#aaa;font-size:12px;margin-top:10px">About Us ———</p></div>
+  <div class="about-right">
+    <p>Started in 2023 inside a small kiosk at Unilag. Tired of bad coffee, we imported beans from Ethiopia and Rwanda and roast in Yaba.</p>
+    <p>Now 500 cups daily. No fake flavors. Just real coffee that makes you work.</p>
+    <button class="btn-story" onclick="openStory()">Read Our Story →</button>
+    <div class="stats"><div><h4>100% Arabica</h4><p>Single origin</p></div><div><h4>Roasted Weekly</h4><p>Never stale</p></div><div><h4>Lagos Made</h4><p>Yaba roast house</p></div></div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>OUR MENU — PICK YOUR FAVOURITE</h2>
+  <div class="grid">
+    <div class="card" data-name="Espresso" data-price="2500"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=300"><h4>Espresso</h4><p>Strong & Bold</p><span>₦2,500</span><button class="btn-small">Add to Cart</button></div>
+    <div class="card" data-name="Cappuccino" data-price="3000"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=300"><h4>Cappuccino</h4><p>Creamy</p><span>₦3,000</span><button class="btn-small">Add to Cart</button></div>
+    <div class="card" data-name="Latte" data-price="3500"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300"><h4>Latte</h4><p>Sweet & Milky</p><span>₦3,500</span><button class="btn-small">Add to Cart</button></div>
+    <div class="card" data-name="Iced Coffee" data-price="3000"><img src="https://images.unsplash.com/photo-1494314671902-399b18174975?w=300"><h4>Iced Coffee</h4><p>Cold</p><span>₦3,000</span><button class="btn-small">Add to Cart</button></div>
+  </div>
+</section>
+
+<section class="testi" id="testimonials">
+  <h2>WHAT LAGOS SAYS</h2>
+  <div class="testi-row">
+    <div class="t-box"><p>"Best coffee in Yaba! I stay awake for 3 lectures straight."</p><br><b>- Tolu, Unilag</b></div>
+    <div class="t-box"><p>"No fake flavor. Real coffee. My office orders 20 cups daily."</p><br><b>- Chiamaka, Ikeja</b></div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>OUR GALLERY</h2><p style="color:#e8b9c6;font-size:13px;margin-top:8px">Hover and click View</p>
+  <div class="gal-row">
+    <div class="gal"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400"><div class="overlay"><button class="btn-view" onclick="openImg(this)">View</button></div></div>
+    <div class="gal"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400"><div class="overlay"><button class="btn-view" onclick="openImg(this)">View</button></div></div>
+    <div class="gal"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400"><div class="overlay"><button class="btn-view" onclick="openImg(this)">View</button></div></div>
+    <div class="gal"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400"><div class="overlay"><button class="btn-view" onclick="openImg(this)">View</button></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-left"><h2>Contact Us</h2><p style="margin-top:15px;color:#666;line-height:1.6">Yaba Roast House, Lagos<br>Open 7am - 9pm Daily<br><br><b>+234 816 585 9227</b><br>yourfavoritecoffeemart@gmail.com</p></div>
+  <div><h3>Send Message</h3><input class="input" placeholder="Name"><input class="input" placeholder="Phone"><textarea class="textarea" placeholder="Message"></textarea><br><button class="btn-y" onclick="alert('Message sent!')">Send</button></div>
+</section>
+
+<footer>
+  <div class="foot-row">
+    <div><h4>YOUR FAVORITE COFFEE MART</h4><p style="margin-top:10px;font-size:13px;line-height:1.6">We don't do decaf.<br>Roasted in Yaba, loved in Lagos.<br>500 cups daily.</p></div>
+    <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a></div>
+    <div><h4>Contact</h4><p style="font-size:13px;line-height:1.6">Yaba, Lagos<br>+234 816 585 9227<br>IG: @yourfavcoffeemart</p></div>
+  </div>
+  <p class="copy">© 2026 YOUR FAVORITE COFFEE MART — No Decaf. Ever.</p>
+</footer>
+
+<!-- STORY PAGE MODAL -->
+<div id="storyModal" class="modal" style="background:rgba(0,0,0,0.85);">
+  <span class="close" onclick="closeStory()">×</span>
+  <div class="modal-box">
+    <h1>WE DON'T DO DECAF.</h1><p style="color:#999;font-size:12px;margin:10px 0 20px 0">Our Full Story</p>
+    <h3>2023 - The Beginning</h3><p style="margin:8px 0 15px 0;color:#555;line-height:1.7">Started with ₦80k in a 2x2 kiosk at Unilag First Gate. Tired of watery Nescafe, we imported 5kg Ethiopia beans.</p>
+    <h3>2024 - The Struggle</h3><p style="margin:8px 0 15px 0;color:#555;line-height:1.7">NEPA took light 3 days, beans burnt. We lost ₦30k. Moved to Yaba with generator. Students lined up 7am before lecture.</p>
+    <h3>2025 - Yaba Roast House</h3><p style="margin:8px 0 15px 0;color:#555;line-height:1.7">Now roast every Monday & Thursday. 100% Arabica, single origin — Ethiopia, Rwanda, Colombia. No fake vanilla syrup.</p>
+    <h3>2026 - 500 Cups Daily</h3><p style="margin:8px 0 20px 0;color:#555;line-height:1.7">Offices in Ikeja, Yaba, Surulere order daily. Promise: Never stale, never fake, always strong.</p>
+    <button class="btn-y" onclick="closeStory();document.getElementById('menu').scrollIntoView()">Order Now</button>
+  </div>
+</div>
+
+<!-- IMAGE VIEW MODAL -->
+<div id="imgModal" class="modal"><span class="close" onclick="closeImg()">×</span><img id="modalImg" src=""></div>
+
+<!-- CART PAGE MODAL -->
+<div id="cartPage" class="cart-page">
+  <span class="close" style="color:#111;top:10px" onclick="closeCart()">×</span>
+  <h1 style="text-align:center;margin-top:20px">Your Cart — YOUR FAVORITE COFFEE MART</h1>
+  <div id="cartItems" style="margin-top:30px"></div>
+  <div style="max-width:600px;margin:20px auto;background:white;border:1px solid #f0d8c5;border-radius:12px;padding:20px;text-align:center">
+    <h3>Total Items: <span id="totalItems">0</span></h3>
+    <h3>Total: ₦<span id="totalPrice">0</span></h3>
+    <br>
+    <input id="cName" class="input" style="margin:10px auto" placeholder="Full Name">
+    <input id="cPhone" class="input" style="margin:10px auto" placeholder="Phone">
+    <textarea id="cAddr" class="textarea" style="margin:10px auto" placeholder="Address in Lagos"></textarea>
+    <br>
+    <button class="btn-y" style="width:100%;max-width:400px" onclick="checkout()">CHECKOUT TO WHATSAPP</button><br><br>
+    <button class="btn-o" style="color:#111;border-color:#111;width:100%;max-width:400px;margin-left:0" onclick="clearCart()">Clear Cart</button><br><br>
+    <a href="#" onclick="closeCart()" style="color:#4E1120;font-weight:bold;text-decoration:none">← Continue Shopping</a>
+  </div>
+</div>
+
+<div class="cart-float" onclick="openCart()">CART: <span id="cartNum">0</span> ●</div>
+
+<script>
+function getCart(){return JSON.parse(localStorage.getItem('yfm_cart'))||[]}
+function saveCart(c){localStorage.setItem('yfm_cart',JSON.stringify(c));updateNav()}
+function updateNav(){
+  let cart=getCart();let t=0;for(let i=0;i<cart.length;i++){t+=cart[i].qty}
+  document.querySelectorAll('#navCount,#cartNum').forEach(e=>e.innerText=t)
+}
+updateNav();
+
+document.querySelectorAll('.card').forEach(card=>{
+  card.querySelector('.btn-small').addEventListener('click',()=>{
+    let name=card.dataset.name;let price=parseInt(card.dataset.price);
+    let cart=getCart();let f=-1;for(let i=0;i<cart.length;i++){if(cart[i].name===name){f=i}}
+    if(f>=0){cart[f].qty++}else{cart.push({name,price,qty:1})}
+    saveCart(cart);alert(name+" added! Qty: "+(f>=0?cart[f].qty:1))
+  })
+});
+
+function openCart(){renderCart();document.getElementById('cartPage').style.display='block'}
+function closeCart(){document.getElementById('cartPage').style.display='none'}
+function openStory(){document.getElementById('storyModal').style.display='flex'}
+function closeStory(){document.getElementById('storyModal').style.display='none'}
+function openImg(btn){
+  let src=btn.parentElement.parentElement.querySelector('img').src;
+  document.getElementById('modalImg').src=src;
+  document.getElementById('imgModal').style.display='flex';
+}
+function closeImg(){document.getElementById('imgModal').style.display='none'}
+
+function renderCart(){
+  let cart=getCart();let container=document.getElementById('cartItems');
+  let totalItems=document.getElementById('totalItems');
+  let totalPrice=document.getElementById('totalPrice');
+  if(cart.length===0){
+    container.innerHTML="<p style='text-align:center;color:#888;margin:40px 0'>Cart empty</p>";
+    totalItems.innerText=0;totalPrice.innerText=0;updateNav();return;
+  }
+  let html="";let qty=0;let price=0;
+  for(let i=0;i<cart.length;i++){
+    let itemTotal=cart[i].price*cart[i].qty;qty+=cart[i].qty;price+=itemTotal;
+    html+=`<div class="cart-item"><div><b>${cart[i].name}</b><br><span>₦${cart[i].price} x ${cart[i].qty} = ₦${itemTotal}</span></div><div class="qty"><button class="q-btn minus" onclick="dec(${i})">-</button><span class="q-num">${cart[i].qty}</span><button class="q-btn" onclick="inc(${i})">+</button><button class="remove" onclick="rem(${i})">Remove</button></div></div>`;
+  }
+  container.innerHTML=html;totalItems.innerText=qty;totalPrice.innerText=price.toLocaleString();updateNav();
+}
+function inc(i){let c=getCart();c[i].qty++;saveCart(c);renderCart()}
+function dec(i){let c=getCart();c[i].qty--;if(c[i].qty<=0){c.splice(i,1)}saveCart(c);renderCart()}
+function rem(i){let c=getCart();c.splice(i,1);saveCart(c);renderCart()}
+function clearCart(){localStorage.removeItem('yfm_cart');renderCart()}
+function checkout(){
+  let c=getCart();let name=document.getElementById('cName').value;
+  let phone=document.getElementById('cPhone').value;let addr=document.getElementById('cAddr').value;
+  if(c.length===0){alert("Cart empty");return}
+  if(name.length<3||phone.length<11||addr.length<8){alert("Fill all fields");return}
+  let total=0;let list="";for(let i=0;i<c.length;i++){total+=c[i].price*c[i].qty;list+=c[i].name+" x"+c[i].qty+" = ₦"+(c[i].price*c[i].qty)+"%0A"}
+  let msg=`NEW ORDER - YOUR FAVORITE COFFEE MART%0AName: ${name}%0APhone: ${phone}%0AAddress: ${addr}%0A%0A${list}%0ATotal: ₦${total}`;
+  window.open("https://wa.me/2348165859227?text="+msg,"_blank");
+  localStorage.removeItem('yfm_cart');renderCart();closeCart();
+}
+</script>
+</body>
+</html>

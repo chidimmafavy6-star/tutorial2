@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAMPUS SURVIVAL HUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style course.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">CAMPUS HUB<span>.NG</span></div>
+  <div class="navlinks"><span id="goTools">TOOLS</span><span id="goResources">RESOURCES</span><span id="goMarket">MARKET</span></div>
+  <button class="nav-btn" id="joinBtn">JOIN HUB</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="pill">🔥 USED BY 5,000+ UNILAG STUDENTS</div>
+    <h1>SURVIVE<br><span>CAMPUS.</span><br>NOT JUST<br>PASS.</h1>
+    <p>GPA calc, past questions, hostel alerts, money tracker, exam countdown. Everything you need in one place.</p>
+    <div class="hero-btns"><button class="main-btn" id="startBtn">START SURVIVING →</button><button class="sec-btn" id="demoBtn">WATCH DEMO</button></div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card c1"><b>3.89</b><p>Your CGPA</p></div>
+    <div class="stat-card c2"><b>12 DAYS</b><p>To Exams</p></div>
+    <div class="stat-card c3"><b>₦4,200</b><p>Left This Month</p></div>
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <h2>TOOLS THAT SAVE YOU</h2>
+  <div class="tool-grid">
+
+    <div class="tool">
+      <h4>GPA CALCULATOR</h4>
+      <label>Course 1 Grade (5=A, 4=B...)</label><input type="number" id="g1" value="5" min="0" max="5"><label>Unit</label><input type="number" id="u1" value="3" min="1"><label>Course 2 Grade</label><input type="number" id="g2" value="4" min="0" max="5"><label>Unit</label><input type="number" id="u2" value="2" min="1"><button class="tool-btn" id="calcGpa">CALCULATE GPA</button><p class="result" id="gpaResult">Result: -</p>
+    </div>
+
+    <div class="tool">
+      <h4>EXAM COUNTDOWN</h4><label>Exam Date</label><input type="date" id="examDate"><button class="tool-btn" id="setCountdown">SET COUNTDOWN</button><p class="result big" id="countResult">Select date</p><button class="small-btn" id="resetCount">RESET</button>
+    </div>
+
+    <div class="tool">
+      <h4>MONEY TRACKER</h4><label>Monthly Allowance</label><input type="number" id="allowance" placeholder="50000"><label>Spent Today</label><input type="number" id="spent" placeholder="2000"><button class="tool-btn" id="calcMoney">CALCULATE BALANCE</button><p class="result" id="moneyResult">Balance: -</p><button class="small-btn" id="clearMoney">CLEAR</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="resources" id="resources">
+  <h2>RESOURCES</h2>
+  <div class="res-grid">
+    <div class="res"><h4>PAST QUESTIONS</h4><p>CSC 201, MTH 101, GST 102 available</p><button class="res-btn" data-file="Past Questions">DOWNLOAD PDF</button></div>
+    <div class="res"><h4>TIMETABLE GENERATOR</h4><p>Create your own lecture table</p><button class="res-btn" data-file="Timetable">GENERATE</button></div>
+    <div class="res"><h4>HOSTEL FINDER</h4><p>Akoka, Yaba, Bariga verified agents</p><button class="res-btn" data-file="Hostel">FIND HOSTEL</button></div>
+  </div>
+</section>
+
+<section class="form-section" id="formSection">
+  <div class="form-left"><h2>JOIN THE HUB</h2><p>Get past questions, hostel alerts and expo-free survival tips on WhatsApp.</p><button class="c-btn" id="waBtn">JOIN WHATSAPP GROUP</button></div>
+  <form class="order-form" id="joinForm">
+    <label>Full Name</label><input type="text" id="name" required>
+    <label>Department</label><input type="text" id="dept" required placeholder="Computer Science">
+    <label>Level</label><select id="level"><option>100</option><option>200</option><option>300</option><option>400</option><option>500</option></select>
+    <label>Phone (WhatsApp)</label><input type="tel" id="phone" required>
+    <label>What do you need most?</label><select id="need"><option>GPA Help</option><option>Past Questions</option><option>Hostel</option><option>Money Management</option></select>
+    <button type="submit" class="submit-btn">JOIN NOW — FREE</button>
+    <p class="form-msg" id="formMsg"></p>
+  </form>
+</section>
+
+<footer><h2>CAMPUS<br>HUB</h2><p>BUILT BY STUDENTS FOR STUDENTS — UNILAG • YABATECH • LASU</p></footer>
+
+<script src="script course.js"></script>
+</body>
+</html>

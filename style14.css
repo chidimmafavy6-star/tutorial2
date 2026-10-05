@@ -1,0 +1,24 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,sans-serif}
+body{background:#ffeef5;display:flex;justify-content:center;padding:20px}
+.flyer{width:420px;background:linear-gradient(180deg,#fff0f6 0%,#ffffff 60%,#fff5f9 100%);border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(255,105,180,.25);padding:24px 20px;text-align:center;position:relative}
+.top{font-size:11px;letter-spacing:2px;color:#555;margin-bottom:8px}
+.blimp{background:linear-gradient(135deg,#fff,#ffd6e7);border:3px solid #ff5fa2;border-radius:60px;padding:18px 12px;position:relative;margin-bottom:16px}
+.blimp h1{font-family:cursive;color:#ff2e88;font-size:42px;line-height:1}
+.blimp h2{font-size:28px;font-weight:900;color:#111;letter-spacing:1px}
+.blimp h3{font-size:32px;font-weight:900;color:#ff5fa2}
+.badge{position:absolute;background:#fff;border:2px dashed #ff5fa2;border-radius:50%;width:110px;height:110px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#333;padding:10px;line-height:1.4}
+.badge.left{left:-10px;top:80px}
+.badge.right{right:-5px;bottom:-30px;border-radius:20px;width:120px;height:110px}
+.gondola{background:#e93a7f;color:#fff;border-radius:0 0 40px 40px;padding:12px;margin:-10px 30px 16px;font-weight:700;font-size:13px;letter-spacing:1px}
+.tagline{font-family:cursive;color:#d81b60;font-size:20px;margin:10px 0}
+.tagline b{font-family:Arial;color:#111;display:block;font-size:18px}
+.features{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin:20px 0;border-top:1px solid #ffd6e7;border-bottom:1px solid #ffd6e7;padding:16px 0}
+.feat{font-size:11px;color:#555}
+.feat .icon{font-size:26px;margin-bottom:6px}
+.feat strong{display:block;color:#c2185b;font-size:11px;margin-bottom:4px}
+.bottom{display:flex;gap:12px;text-align:left;align-items:center}
+.shop-bg{background:#e91e63;color:#fff;padding:12px;border-radius:4px;transform:rotate(-2deg);font-weight:900;flex:1}
+.shop-bg span{font-family:cursive;font-weight:400;display:block;font-size:18px}
+.social{flex:1;font-size:12px;color:#333}
+.social p{margin:6px 0}
+.handle{background:#111;color:#fff;padding:4px 8px;border-radius:12px;font-size:11px;display:inline-block}

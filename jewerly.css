@@ -1,0 +1,204 @@
+:root {
+    --gold: #D4AF37;
+    --black: #0E0E0E;
+    --cream: #FAF7F2;
+    --gray: #6B6B6B;
+  }
+
+    * {
+       margin: 0;
+        padding: 0;
+         box-sizing: border-box;
+         }
+  body {
+     font-family: 'Poppins', sans-serif; 
+     background: whitesmoke;
+     color: black;
+  h1,h2,h3 { font-family: 'Playfair Display', serif; }
+  }
+  
+  header {
+    background: black;
+    color: #fff;
+    padding: 20px 8%;
+    display: flex; 
+    justify-content: space-between;
+     align-items: center;
+    position: sticky;
+     top: 0;
+      z-index: 1000;
+  }
+  .logo {
+     font-size: 1.8rem; font-weight: 700;
+      letter-spacing: 3px;
+       color: gold;
+       }
+  nav a {
+     color: #fff;
+      text-decoration: none;
+       margin: 0 15px;
+        font-size: 0.9rem;
+         transition: 0.3s;
+         }
+  nav a:hover {
+     color: gold;
+     }
+  .icons {
+     display: flex;
+      gap: 20px; }
+
+  
+  .hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=2070') center/cover;
+    color: #fff;
+    display: flex;
+     flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+     text-align: center;
+    padding: 0 20px;
+  }
+  .hero h1 { font-size: 3.5rem;
+     margin-bottom: 15px;
+     }
+  .hero p {
+     font-size: 1.1rem;
+      margin-bottom: 30px;
+       max-width: 500px;
+       }
+  .btn {
+     background: gold; 
+    color: black;
+     padding: 14px 35px;
+      border: none; 
+      border-radius: 0;
+       font-weight: 600;
+         transition: 0.3s; 
+         text-decoration: none;
+          display: inline-block;
+         }
+  .btn:hover {
+     background: #fff; 
+    }
+
+  /* COLLECTIONS */
+  section {
+     padding: 80px 8%;
+     }
+  .section-title {
+     text-align: center;
+      font-size: 2.5rem;
+       margin-bottom: 10px;
+       }
+  .section-sub {
+     text-align: center; 
+     color: gray;
+      margin-bottom: 50px;
+     }
+  .grid {
+     display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+             gap: 30px; 
+            }
+  .product {
+     background: #fff;
+      text-align: center;
+       transition: 0.3s; }
+  .product img { 
+    width: 100%; 
+    height: 350px;
+     object-fit: cover;
+     }
+  .product:hover {
+     transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+     }
+  .product-info {
+     padding: 20px;
+     }
+  .product-info h4 {
+     font-size: 1.2rem;
+      margin-bottom: 5px;
+     }
+  .price { color: gold;
+     font-weight: 600;
+      margin-bottom: 10px;
+     }
+
+  
+  .about { 
+    background: black;
+     color: #fff;
+      display: grid;
+       /* grid-template-columns: 1fr 1fr; */
+        gap: 50px; 
+        align-items: center; }
+  .about img {
+     width: 100%;
+     }
+  .about h2 { 
+    color: gold; 
+    margin-bottom: 20px;
+   }
+  .testimonial {
+     background: #fff;
+      padding: 30px; 
+      border-left: 3px solid gold;
+     }
+  .testimonial p { font-style: italic;
+     margin-bottom: 15px;
+     }
+  .testimonial h5 {
+     color: gold; 
+  }
+
+  
+  .contact {
+     background: whitesmoke; }
+  .contact-form {
+     max-width: 600px;
+     margin: auto;
+      display: flex;
+       flex-direction: column;
+        gap: 15px;
+       }
+  .contact-form input, .contact-form textarea {
+     padding: 15px;
+      border: 1px solid #ddd; 
+      font-family: 'Poppins'; 
+    }
+
+  
+  footer { background: black;
+     color: #fff;
+      padding: 50px 8%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+         gap: 30px; }
+      
+  footer h4 { 
+    color: gold;
+     margin-bottom: 15px; 
+    }
+  footer a { 
+    color: #ccc;
+     text-decoration: none;
+      display: block;
+       margin-bottom: 8px;
+        font-size: 0.9rem;
+       }
+  footer a:hover { 
+    color:gold;
+   }
+  .copyright {
+     text-align: center;
+     padding: 20px;
+     background: #000;
+     color: #aaa; font-size: 0.8rem; }
+
+  @media (max-width: 900px) {
+    .about { grid-template-columns: 1fr; }
+    nav { display: none; }
+    .hero h1 { font-size: 2.5rem; }
+  }

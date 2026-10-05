@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee — Best Coffee</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cofee.css">
+</head>
+<body>
+
+
+<nav>
+  <div class="logo"><div class="logo-icon">☕</div> Your Favourite Coffee Mart</div>
+  <div class="navlinks">
+    <span id="goHome">Home</span>
+    <span class="active" id="goAbout">About</span>
+    <span id="goMenu">Menu</span>
+    <span id="goTest">Testimonials</span>
+    <span id="goGallery">Gallery</span>
+    <span id="goContact">Contact</span>
+     <a href="#" onclick="openCart()">Cart 🛒 (<span id="navCount">0</span>)</a>
+  </div>
+  <button class="nav-btn" id="orderNav">Order Now</button>
+ 
+</nav>
+
+
+<section class="home" id="home">
+  <div class="home-left">
+    <div class="best">Best Coffee</div>
+    <h1>Make your day great with our special coffee!</h1>
+    <p>Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+    <div class="btn-row">
+      <button class="main-btn" id="orderHome">Order Now</button>
+      <button class="sec-btn" id="contactHome">Contact Us</button>
+    </div>
+  </div>
+  <div class="home-right">
+    <img src="media/coffee.png" class="hero-img" alt="Coffee Splash">
+  </div>
+</section>
+
+
+<section class="about" id="about">
+  <div class="about-left"><h2>WE DON'T DO DECAF.</h2><p class="small-label">About Us</p></div>
+  <div class="about-right">
+    <p>Started in 2023 inside a small kiosk at Unilag. Tired of bad coffee, we imported beans from Ethiopia and Rwanda and roast in Yaba.</p>
+    <p>Now 500 cups daily. No fake flavors. Just real coffee that makes you work.</p>
+    <div class="about-btns"><button class="main-btn" id="storyBtn">Read Our Story</button><button class="sec-btn dark" id="visitBtn">Visit Shop</button></div>
+    <div class="about-grid"><div><b>100% Arabica</b><p>Single origin</p></div><div><b>Roasted Weekly</b><p>Never stale</p></div><div><b>Lagos Made</b><p>Yaba roast house</p></div></div>
+  </div>
+</section>
+
+
+<section class="menu" id="menu">
+  <h2>OUR MENU — PICK YOUR FAVOURITE</h2>
+  <div class="menu-grid">
+    <div class="menu-card"><div class="emoji">☕</div><h4>ICED CARAMEL — ₦2,500</h4><p>Bestseller • Sweet • Cold</p><button class="card-btn" data-drink="Iced Caramel">ADD +</button></div>
+    <div class="menu-card"><div class="emoji">🥤</div><h4>COLD BREW — ₦2,000</h4><p>Strong • Black • 200mg</p><button class="card-btn" data-drink="Cold Brew">ADD +</button></div>
+    <div class="menu-card"><div class="emoji">🍫</div><h4>MOCHA LATTE — ₦2,800</h4><p>Chocolate • Creamy</p><button class="card-btn" data-drink="Mocha Latte">ADD +</button></div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <h2>GALLERY — NO FILTER</h2>
+  <div class="gallery-grid">
+    <div class="g-item"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600"><p>Morning Brew</p><button class="g-btn">VIEW</button></div>
+    <div class="g-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600"><p>Roast House</p><button class="g-btn">VIEW</button></div>
+    <div class="g-item"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600"><p>Latte Art</p><button class="g-btn">VIEW</button></div>
+    <div class="g-item"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600"><p>Unilag Pop-up</p><button class="g-btn">VIEW</button></div>
+  </div>
+</section>
+
+
+<section class="testimonials" id="testimonials">
+  <h2>WHAT LAGOS SAYS</h2>
+  <div class="test-grid">
+    <div class="test"><div class="stars">★★★★★</div><p>"I used to drink Nescafe. Now I can't go back. Thesis finished because of this coffee."</p><b>— Tobi, UNILAG</b><button class="test-btn">❤️ LIKE</button></div>
+    <div class="test"><div class="stars">★★★★★</div><p>"Cold brew is mad. I lift 20kg extra at gym."</p><b>— Amara, Yaba</b><button class="test-btn">❤️ LIKE</button></div>
+    <div class="test"><div class="stars">★★★★★</div><p>"Best iced caramel in Lagos. Period."</p><b>— Chidi, Ikeja</b><button class="test-btn">❤️ LIKE</button></div>
+  </div>
+
+  <div class="add-test">
+    <h4>ADD YOUR TESTIMONY</h4><input type="text" id="testName" placeholder="Your name"><textarea id="testText" placeholder="Your testimony..."></textarea><button class="main-btn" id="postTest">POST TESTIMONY</button><p id="testMsg"></p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-left"><h2>COME BREW.</h2><p>12 Herbert Macaulay, Yaba. 6am-10pm. Delivery 30 mins.</p><div class="c-infos"><p>📍 12 Herbert Macaulay, Yaba</p><p>📞 080 BREW LAGOS</p><p>📧 hello@brewlagos.ng</p></div><button class="c-btn" id="waBtn">WHATSAPP US</button><button class="c-btn dark" id="callBtn">CALL US</button><button class="c-btn dark" id="mapBtn">OPEN MAP</button></div>
+  <form class="order-form" id="contactForm">
+    <label>Full Name</label><input type="text" id="name" required>
+    <label>Phone</label><input type="tel" id="phone" required>
+    <label>What do you want?</label><select id="drink"><option>Iced Caramel - ₦2,500</option><option>Cold Brew - ₦2,000</option><option>Latte - ₦2,800</option><option>Espresso - ₦1,500</option></select>
+    <label>Quantity</label><input type="number" id="qty" value="1" min="1">
+    <label>Address</label><input type="text" id="address" required placeholder="Hostel / Office">
+    <label>Note</label><textarea id="note" placeholder="Less sugar..."></textarea>
+    <button type="submit" class="submit-btn">ORDER NOW — PAY ON DELIVERY</button><p class="form-msg" id="formMsg"></p>
+  </form>
+</section>
+
+<footer><h2>BREW LAGOS</h2><p>©2026 — COFFEE THAT SLAPS • YABA • LAGOS</p></footer>
+<div class="cart-float" id="cart">CART: <span id="count">0</span> ☕</div>
+
+<!-- CART PAGE MODAL -->
+<div id="cartPage" class="cart-page">
+  <span class="close" style="color:#111;top:10px" onclick="closeCart()">×</span>
+  <h1 style="text-align:center;margin-top:20px">Your Cart — YOUR FAVORITE COFFEE MART</h1>
+  <div id="cartItems" style="margin-top:30px"></div>
+  <div style="max-width:600px;margin:20px auto;background:white;border:1px solid #f0d8c5;border-radius:12px;padding:20px;text-align:center">
+    <h3>Total Items: <span id="totalItems">0</span></h3>
+    <h3>Total: ₦<span id="totalPrice">0</span></h3>
+    <br>
+    <input id="cName" class="input" style="margin:10px auto" placeholder="Full Name">
+    <input id="cPhone" class="input" style="margin:10px auto" placeholder="Phone">
+    <textarea id="cAddr" class="textarea" style="margin:10px auto" placeholder="Address in Lagos"></textarea>
+    <br>
+    <button class="btn-y" style="width:100%;max-width:400px" onclick="checkout()">CHECKOUT TO WHATSAPP</button><br><br>
+    <button class="btn-o" style="color:#111;border-color:#111;width:100%;max-width:400px;margin-left:0" onclick="clearCart()">Clear Cart</button><br><br>
+    <a href="#" onclick="closeCart()" style="color:#4E1120;font-weight:bold;text-decoration:none">← Continue Shopping</a>
+  </div>
+</div>
+
+<script src="script cofee.js"></script>
+</body>
+</html>

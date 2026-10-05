@@ -1,0 +1,20 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;display:flex;justify-content:center;padding:20px;font-family:Arial,sans-serif}
+.banner{width:100%;max-width:1100px;background:#0f0d0b;color:#f5e6c8;border:1px solid #c9a86a;overflow:hidden}
+.top{text-align:center;padding:40px 20px 20px;background:radial-gradient(circle at center,#2a221a 0%,#0f0d0b 70%)}
+.top h1{font-size:52px;letter-spacing:6px;color:#e8c87a;font-family:Georgia,serif}
+.top h1 span{color:#fff}
+.top p{letter-spacing:4px;font-size:12px;color:#c9a86a;margin-top:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#c9a86a;border-top:1px solid #c9a86a;border-bottom:1px solid #c9a86a}
+.card{background:#151210;padding:20px;text-align:center}
+.card h2{font-size:16px;letter-spacing:2px;color:#e8c87a;margin:16px 0 10px}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:8px;border:1px solid #3a3128}
+.card p{font-size:12px;color:#aaa;line-height:1.6;margin-top:10px}
+.cta{text-align:center;padding:30px 20px;background:#000}
+.cta a.main{display:inline-block;padding:14px 40px;background:linear-gradient(90deg,#c9a86a,#e8c87a);color:#000;text-decoration:none;font-weight:800;letter-spacing:2px;font-size:13px;border-radius:30px;margin-bottom:20px}
+.socials{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:10px}
+.socials a{color:#e8c87a;text-decoration:none;font-size:12px;letter-spacing:1px;border:1px solid #c9a86a;padding:10px 16px;border-radius:20px;transition:.3s}
+.socials a:hover{background:#c9a86a;color:#000}
+.socials span{font-weight:700;color:#fff}
+.footer{background:#0a0a0a;text-align:center;padding:18px;font-size:11px;color:#888;letter-spacing:1px;border-top:1px solid #2a221a}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.top h1{font-size:36px}}

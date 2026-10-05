@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#fff0f5
+}
+header{
+    background:#fff;
+    padding:15px 5%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<style>
+body{font-family:Arial; background:#ffe6f0; display:flex; justify-content:center; padding:20px; margin:0}
+.box{background:white; padding:25px; border-radius:15px; width:100%; max-width:380px; box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+h2{text-align:center; color:#ff0066}
+input, select{width:100%; padding:12px; margin:8px 0; border-radius:8px; border:1px solid #ddd; box-sizing:border-box}
+button{width:100%; padding:12px; background:#ff0066; color:white; border:none; border-radius:25px; font-weight:bold; cursor:pointer; margin-top:10px}
+a{color:#ff0066; text-decoration:none; font-weight:bold}
+#msg{text-align:center; margin-top:10px; font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Create Account</h2>
+  <input type="text" id="fullname" placeholder="Full Name">
+  <input type="email" id="gmail" placeholder="Gmail">
+  <input type="password" id="password" placeholder="Password">
+  <input type="tel" id="phone" placeholder="Phone Number">
+  <input type="date" id="dob">
+  <select id="gender">
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+  <button onclick="doSignup()">Sign Up</button>
+  <p id="msg"></p>
+  <p style="text-align:center">Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function doSignup(){
+  let fullname = document.getElementById('fullname').value;
+  let gmail = document.getElementById('gmail').value;
+  let password = document.getElementById('password').value;
+  let phone = document.getElementById('phone').value;
+  let dob = document.getElementById('dob').value;
+  let gender = document.getElementById('gender').value;
+  let msg = document.getElementById('msg');
+
+  if(fullname=="" || gmail=="" || password=="" || phone=="" || dob=="" || gender==""){
+    msg.style.color="red";
+    msg.innerHTML="Please fill all fields";
+    return;
+  }
+
+  // Save user data
+  let user = {fullname, gmail, password, phone, dob, gender};
+  localStorage.setItem("userData", JSON.stringify(user));
+
+  msg.style.color="green";
+  msg.innerHTML="Account created! Redirecting to login...";
+  setTimeout(()=>{ window.location.href="login.html"; }, 1500);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diva Empire Shop</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">DIVA EMPIRE</div>
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('login')">Login</button>
+    <button onclick="showSection('signup')">Sign Up</button>
+    <button class="cart-btn" onclick="showSection('cart')">🛒 Cart <span id="cart-count">0</span></button>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section active">
+  <h2>Shop Collection</h2>
+  <div class="products" id="product-list"></div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="section">
+  <div class="form-box">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="login-msg"></p>
+    <small>Don't have account? <span onclick="showSection('signup')">Sign Up</span></small>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section id="signup" class="section">
+  <div class="form-box">
+    <h2>Create Account</h2>
+    <input type="text" id="signup-name" placeholder="Full Name">
+    <input type="email" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-pass" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <p id="signup-msg"></p>
+    <small>Already have account? <span onclick="showSection('login')">Login</span></small>
+  </div>
+</section>
+
+<!-- CART -->
+<section id="cart" class="section">
+  <div class="form-box" style="max-width:500px;">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="cart-total"></h3>
+    <button onclick="checkout()">Checkout</button>
+    <button class="outline" onclick="showSection('home')">Continue Shopping</button>
+  </div>
+</section>
+
+<script src="script3.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+*{margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Playfair Display',Georgia,serif
+}
+body{
+    background:#0a0a0a;
+    display:flex;
+    justify-content:center;
+    padding:20px
+}
+.banner{
+    width:100%; 
+    max-width:1100px;
+    background:#0f0d0b;
+    color:#f5e6c8;border:1px solid #c9a86a;overflow:hidden}
+.top{text-align:center;padding:40px 20px 20px;background:radial-gradient(circle at center,#2a221a 0%,#0f0d0b 70%)}
+.top h1{font-size:52px;letter-spacing:6px;color:#e8c87a;font-weight:700}
+.top h1 span{color:#fff}
+.top p{letter-spacing:4px;font-size:12px;color:#c9a86a;margin-top:10px;font-family:Arial}
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:1px;background:#c9a86a;
+    border-top:1px solid #c9a86a;
+    border-bottom:1px solid #c9a86a
+}
+.card{
+    background:#151210;
+    padding:30px 20px;
+    text-align:center
+}
+.card .icon{
+    font-size:32px;
+    margin-bottom:12px
+}
+.card h2{
+    font-size:18px;
+    letter-spacing:2px;
+    color:#e8c87a;
+    margin-bottom:16px;
+    font-family:Arial
+}
+.card .prod{
+    height:180px;
+    background:linear-gradient(180deg,#2b241d,#1a1612);
+    border:1px solid #3a3128;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    margin-bottom:16px;
+    border-radius:8px
+}
+.card p{
+    font-size:12px;
+    color:#aaa;
+    line-height:1.6;
+    font-family:Arial
+}
+.cta{
+    text-align:center;
+    padding:30px;
+    background:#000
+}
+.cta a{
+    display:inline-block;
+    padding:14px 40px;
+    background:linear-gradient(90deg,#c9a86a,#e8c87a);
+    color:#000;
+    text-decoration:none;
+    font-family:Arial;
+    font-weight:800;
+    letter-spacing:2px;
+    font-size:13px;
+    border-radius:30px
+}
+@media(max-width:768px){
+    .grid{grid-template-columns:1fr}
+    .top h1{font-size:36px}
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BREW & BLOOM | Coffee Lagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cofee5.css">
+</head>
+<body>
+
+<nav><b>BREW HAVEN</b><div>
+<a id="l-home" class="active" onclick="show('home')">Home</a>
+<a id="l-menu" onclick="show('menu')">Menu</a>
+<a id="l-gallery" onclick="show('gallery')">Gallery</a>
+<a id="l-testimonials" onclick="show('testimonials')">Testimonials</a>
+<a id="l-about" onclick="show('about')">About</a>
+<a id="l-contact" onclick="show('contact')">Contact</a>
+<span onclick="toggleCart()" style="margin-left:12px;cursor:pointer">🛒 <b id="cartCount">0</b></span>
+</div></nav>
+
+
+<div id="home" class="page active">
+<section class="hero"><div>
+<span style="background:#e8d5c4;padding:6px 12px;border-radius:20px;font-size:11px">☕ LEKKI • SPECIALTY COFFEE</span>
+<h1 style="font-size:42px;margin:12px 0;line-height:1.1">Brewed to Perfection, Served with Soul</h1>
+<p style="font-size:13px;color:#6b5a55">Fresh roast every Monday. Ethical, smooth, made for Lagos mornings.</p><br>
+<button class="btn" onclick="show('menu')">Order Now →</button><button class="btn" style="background:transparent;border:1px solid var(--brown);color:var(--brown);margin-left:6px" onclick="show('gallery')">View Gallery</button>
+</div>
+<div class="hero-img-wrap" id="heroWrap">
+<img class="active" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=800">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800">
+<img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnHoF_YlXd3j-QR8dHzoxUt5cbswW3f_0DBy3a07iRNA&s=10" alt="">
+</div>
+</section>
+</div>
+
+
+<div id="menu" class="page">
+<div style="padding:18px 5% 0"><span class="back" onclick="show('home')">← Back to Home</span></div>
+<div style="text-align:center;padding:10px 5%"><h2>Our Menu</h2><p style="font-size:12px">Tap to add • </p></div>
+<div class="grid3">
+<div class="card" onclick="add('Flat White',3500)"><h3>Flat White</h3><p style="font-size:11px">Velvety milk</p><b>₦3,500</b></div>
+<div class="card" onclick="add('Iced Caramel Latte',4200)"><h3>Iced Caramel Latte</h3><p style="font-size:11px">Caramel + milk</p><b>₦4,200</b></div>
+<div class="card" onclick="add('Cold Brew',3500)"><h3>Cold Brew</h3><p style="font-size:11px">16hr steep</p><b>₦3,500</b></div>
+<div class="card" onclick="add('Butter Croissant',2500)"><h3>Butter Croissant</h3><p style="font-size:11px">Fresh baked</p><b>₦2,500</b></div>
+<div class="card" onclick="add('Matcha Latte',4000)"><h3>Matcha Latte</h3><p style="font-size:11px">Ceremonial</p><b>₦4,000</b></div>
+<div class="card" onclick="add('Banana Bread',2800)"><h3>Banana Bread</h3><p style="font-size:11px">Walnuts</p><b>₦2,800</b></div>
+</div>
+</div>
+
+
+<div id="gallery" class="page">
+<div style="padding:18px 5% 0"><span class="back" onclick="show('home')">← Back to Home</span></div>
+<div style="text-align:center;padding:10px 5%"><h2>Gallery</h2></div>
+<div class="gallery">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnHoF_YlXd3j-QR8dHzoxUt5cbswW3f_0DBy3a07iRNA&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_4n7ppmbCtk-e7leRgpDUPnXLlN3aUZFkP-he_mtzw&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfJnrcyT6U9psZg4yzpW6qEi0lXsVJsCwfnr7OmH7pA&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrKZKsEDsvbJoYB8KnrspCqEFzhgJB6H7WjX-hN-ex9Q&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIWfPm9JxmzFhO1RUDL-IBJ58M8OxZ3dn-WJyV4jQkA&s=10" onclick="openLB(this.src)">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRTr6IYhE9a0bzWSeVpiH20GyLBuqde-9_Crimse-gg&s=10" onclick="openLB(this.src)">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=400" onclick="openLB(this.src)">
+<img src="https://images.unsplash.com/photo-1494314671902-399b18174975?q=80&w=400" onclick="openLB(this.src)">
+</div>
+</div>
+
+
+<div id="testimonials" class="page">
+<div style="padding:18px 5% 0"><span class="back" onclick="show('home')">← Back to Home</span></div>
+<div style="text-align:center;padding:10px 5%"><h2>What They Say ♡</h2></div>
+<div id="tGrid" class="grid3">
+<div class="card"><div style="color:var(--accent)">★★★★★</div><p style="font-size:13px;margin:8px 0">"Best flat white in Lagos!"</p><b style="font-size:11px">Tolu A.</b></div>
+<div class="card"><div style="color:var(--accent)">★★★★★</div><p style="font-size:13px;margin:8px 0">"Cold brew elite. No bitterness."</p><b style="font-size:11px">David O.</b></div>
+<div class="card"><div style="color:var(--accent)">★★★★★</div><p style="font-size:13px;margin:8px 0">"Cozy work spot."</p><b style="font-size:11px">Amara C.</b></div>
+</div>
+<div style="max-width:420px;margin:18px auto;background:white;padding:16px;border-radius:14px"><input id="tName" placeholder="Your name"><textarea id="tText" placeholder="How was your coffee?"></textarea><button class="btn" style="width:100%" onclick="addT()">Post Review</button></div>
+</div>
+
+<div id="about" class="page">
+<div style="padding:18px 5% 0"><span class="back" onclick="show('home')">← Back to Home</span></div>
+<section class="hero"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=600" style="width:100%;height:300px;object-fit:cover;border-radius:20px"><div><h2>Our Story</h2><p style="font-size:13px;line-height:1.7;margin:10px 0">Founded in 2022 in Lekki, one La Marzocco, big dream. Ethical beans from Ethiopia & Rwanda, roasted every Monday.</p><button class="btn" onclick="show('contact')">Visit Us →</button></div></section>
+</div>
+
+
+<div id="contact" class="page">
+<div style="padding:18px 5% 0"><span class="back" onclick="show('home')">← Back to Home</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:10px 5%"><div><div class="card"><h3>Visit Us</h3><p style="font-size:13px;line-height:1.6;margin-top:8px">📍 12 Admiralty Way, Lekki<br>⏰ 7am-8pm Daily<br>📱 +234 9021228811<br>✉️ hello@brewandbloom.com</p></div></div><div class="card"><h3>Message Us</h3><input id="cName" placeholder="Your Name"><textarea id="cMsg" placeholder="Message"></textarea><button class="btn" style="width:100%" onclick="sendC()">Send on WhatsApp</button></div></div>
+</div>
+
+
+<div class="cart" id="cart"><h4>Your Cart 🛒</h4><div id="cList" style="margin:10px 0"></div><hr><div style="display:flex;justify-content:space-between;margin-top:8px"><b>Total</b><b id="cTotal">₦0</b></div><button class="btn" style="width:100%;margin-top:10px" onclick="checkout()">Checkout on WhatsApp</button><button style="width:100%;background:none;border:none;color:#888;margin-top:6px;cursor:pointer" onclick="toggleCart()">Continue</button></div>
+<div id="lightbox" onclick="this.classList.remove('show')"><img id="lbImg"></div>
+<div id="toast"></div>
+<footer>© 2026 Brew & Bloom •</footer>
+
+<script src="cofee5script.js"></script>
+</body>
+</html>

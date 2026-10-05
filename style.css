@@ -1,0 +1,55 @@
+@keyframes myanimation{
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: red;
+        width: 300px;
+        height: 300px;
+        /* border-radius: 50%; */
+    }
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    animation-name: myanimation;
+    animation-duration: 7s;
+    /* animation-delay: -2s; */
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+}
+
+@keyframes Chidimma{
+    0%{
+        background-color: yellowgreen;
+        width: 150px;
+        height: 150px;
+    }
+    25%{
+        background:red;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    50%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    animation-name: Chidimma;
+    animation-duration: 6s;
+    /* animation-delay: -2s; */
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in;
+    animation-direction: alternate-reverse;
+}
